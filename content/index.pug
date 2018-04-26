@@ -1,0 +1,244 @@
+doctype html
+html
+	head
+		meta(charset="utf8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Cloud City
+
+		link(
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Monoton"
+			crossorigin="anonymous")/
+
+		link(
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css"
+			crossorigin="anonymous")/
+
+		link(
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css"
+			crossorigin="anonymous")/
+
+		link(rel="stylesheet" href="/static/style.css")/
+
+	body.sans-serif.lh-copy.code
+		header.fixed.w-100.pa3.tc
+			nav.navbar.mw7.center.code.f7
+				a.link.glow.o-80.white.ttu.pa2.mh1(href="#band") Band
+				a.link.glow.o-80.white.ttu.pa2.mh1(href="#shows") Shows
+				a.link.glow.o-80.white.ttu.pa2.mh1(href="#music") Music
+				a.link.glow.o-80.white.ttu.pa2.mh1(href="#video") Video
+				a.link.glow.o-80.white.ttu.pa2.mh1(href="#contact") Contact
+
+		section.intro
+			h1.white.center.o-60.normal.tc.pa4.pt5.ma0.f1 Cloud City
+			header.w-100.pa3.tc
+				nav.navbar.mw7.center.f7
+					a.link.glow.o-80.white.ttu.pa2(href="#band") Band
+					a.link.glow.o-80.white.ttu.pa2(href="#shows") Shows
+					a.link.glow.o-80.white.ttu.pa2(href="#music") Music
+					a.link.glow.o-80.white.ttu.pa2(href="#video") Video
+					a.link.glow.o-80.white.ttu.pa2(href="#contact") Contact
+
+				nav.navbar.mw7.center.f4.mt4
+					a.link.glow.o-80.white.ttu.pa2(href="#contact") #[i.fab.fa-facebook-f]
+					a.link.glow.o-80.white.ttu.pa2(href="#contact") #[i.fab.fa-instagram]
+					a.link.glow.o-80.white.ttu.pa2(href="#contact") #[i.fab.fa-soundcloud]
+
+
+		section#band
+			.center.mw7.pa3
+				h2.tc.f3.ttu.normal The Band
+
+				img.img-fluid(src="http://cloudcitymusic.com/wp-content/uploads/2018/04/V3.jpg")
+
+				p.lh-copy.f6
+					| Formed in 2013, Cloud City is the product of diverse influences and the desire to play hard
+					| hitting progressive jazz-funk in the Nation’s Capital. Cloud City’s high-energy, improvisational
+					| and backbeat driven sound has been described as “simultaneously fun and challenging”. Stringing
+					| together varied influences such as Snarky Puppy, Forq, Tauk, Vulfpeck and Lettuce, Cloud City’s
+					| genre bending aesthetic spans funk, neo-soul, blues, indie-rock, hip-hop, afro-beat and jazz.
+					| Cloud City released their self-titled debut EP in November 2015 and are undoubtedly a heavy
+					| hitter in Ottawa’s vibrant and growing progressive-funk scene.
+
+				h3.tc.f5.normal.pt2 Cloud City
+
+				ul.list.f6.tc.lh-copy
+					li.dib.mr4 Ajo Elias &ndash; #[em Trumpet]
+					li.dib.mr4 Andrew Gesing &ndash; #[em Sax]
+					li.dib.mr4 Dave Wilkinson &ndash; #[em Guitar]
+					li.dib.mr4 Samuel Cormier-Iijima &ndash; #[em Keys]
+					li.dib.mr4 Daniel Abrams &ndash; #[em Bass]
+					li.dib.mr4 Robert Rzepka &ndash; #[em Drums]
+					li.dib.mr4 Noureddine Ismag &ndash; #[em Percussion]
+
+		section#shows
+			.center.mw7.pa3
+				h2.tc.f3.ttu.normal.black Shows
+
+				nav.navbar.tc.center.f7
+					a.link.glow.o-80.ttu.pa2.bw1.bb.b.black.filter-shows.active(href="#shows-upcoming") Upcoming
+					a.link.glow.o-80.ttu.pa2.bw1.black.filter-shows(href="#shows-past") Past
+
+				mixin show(year, date, dow, poster)
+					tr.v-middle
+						td.ttu.pv3.bb.b--black-20.f7.lh-solid
+							= dow
+							br
+							span.f4= date
+							br
+							= year
+						td.pv3.bb.b--black-20
+							block
+						td.bb.b--black-20.tr
+							a.blue.link.dim.lh-solid(href=poster data-lightbox="posters") #[i.far.fa-image.f3]
+
+				table.w-100.gray.mt4.pb6(cellspacing="0")
+					tbody#shows-upcoming
+						+show("2018", "Jun 2", "Sat", "/static/posters/2018-jun-02.jpg")
+							a.black.link.dim(href="https://www.mercurylounge.com/") Mercury Lounge
+							br
+							span.o-40 w/ #[a.black.link.dim(href="https://www.facebook.com/shesisd/") Doressa]
+
+					tbody#shows-past.dn
+						+show("2017", "Sep 1", "Fri", "/static/posters/2017-sep-01.jpg")
+							a.black.link.dim(href="http://irenespub.ca/") Irene's Pub
+							br
+							span.o-40 w/ #[a.black.link.dim(href="http://cutandpasterecords.bigcartel.com/") Darcy D (Cut &amp; Paste Records)]
+						+show("2016", "Nov 19", "Sat", "/static/posters/2016-nov-19.jpg")
+							a.black.link.dim(href="http://irenespub.ca/") Irene's Pub
+						+show("2016", "Jul 8", "Fri", "/static/posters/2016-jul-08.jpg")
+							a.black.link.dim(href="http://www.avantgardebar.com/") Avant Garde Bar
+							br
+							span.o-40 w/ #[a.black.link.dim(href="https://theroyalsmtl.bandcamp.com/") The Royals]
+						+show("2016", "Feb 27", "Sat", "/static/posters/2016-feb-27.jpg")
+							a.black.link.dim(href="http://irenespub.ca/") Irene's Pub
+							br
+							span.o-40 w/ #[a.black.link.dim(href="https://www.facebook.com/horizonquintet/") Horizon Quintet]
+						+show("2015", "Nov 14", "Sat", "/static/posters/2015-nov-14.jpg")
+							| #[a.black.link.dim(href="https://www.mercurylounge.com/") Mercury Lounge] CD Release Party
+							br
+							span.o-40 w/ DJ #[a.black.link.dim(href="https://www.facebook.com/horizonquintet/") Trevor Walker]
+						+show("2015", "Mar 27", "Fri", "/static/posters/2015-mar-27.jpg")
+							a.black.link.dim(href="https://www.black.link.dimsquirrelbooks.ca/") Black Squirrel Books
+							br
+							span.o-40 w/ #[a.black.link.dim(href="https://mellowkotzen.bandcamp.com/") Mellowkotzen]
+						+show("2015", "Jan 16", "Fri", "/static/posters/2015-jan-16.jpg")
+							a.black.link.dim(href="https://www.mercurylounge.com/") Mercury Lounge
+						+show("2014", "Nov 29", "Sat", "/static/posters/2014-nov-29.jpg")
+							a.black.link.dim(href="http://irenespub.ca/") Irene's Pub
+							br
+							span.o-40 w/ #[a.black.link.dim(href="https://www.carolyn-fe.com/") Carolyn Fe Blues Collective]
+						+show("2014", "Jun 13", "Fri", "/static/posters/2014-jun-13.jpg")
+							a.black.link.dim(href="http://irenespub.ca/") Irene's Pub
+							br
+							span.o-40 w/ #[a.black.link.dim(href="https://www.facebook.com/deathcakeband") Death Cake]
+
+		section#music
+			.center.mw7.pa3
+				h2.tc.f3.ttu.normal Music
+
+				iframe(
+					width="100%"
+					height="300"
+					scrolling="no"
+					frameborder="no"
+					allow="autoplay"
+					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/161845442&color=%233474a4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true")
+
+				p.tc
+					a.white.link.glow.o-80.ttu.pa1.bb(href="https://cloudcityottawa.bandcamp.com/") #[i.fab.fa-bandcamp] Download the album on BandCamp
+					|
+					| |
+					|
+					a.white.link.glow.o-80.ttu.pa1.bb(href="https://archive.org/details/CloudCityMusic") Live Recordings
+
+		section#video
+			.center.mw7.pa3
+				h2.tc.f3.ttu.normal Video
+
+				.aspect-ratio
+					iframe(
+						src="https://www.youtube-nocookie.com/embed/1QB-Mh2ExBY?showinfo=0"
+						frameborder="0"
+						allow="autoplay; encrypted-media"
+						allowfullscreen)
+
+		section#contact
+			.center.mw7.pa3
+				h2.tc.f3.ttu.normal Contact
+
+				form.f6.fw6.lh-copy.mw6.center(name="contact" method="post" netlify)
+					div.mt3
+						label.db(for="contact-name") Name
+						input.db.w-100.pa2#contact-name(type="text" name="name")
+					div.mt3
+						label.db(for="contact-name") Email
+						input.db.w-100.pa2#contact-email(type="email" name="email")
+					div.mt3
+						label.db(for="contact-message") Message
+						textarea.db.w-100.pa2#contact-message(rows=5)
+					div.mt4.tc
+						button.f6.ttu.grow.pointer.ph4.pv2.dib.white.bw1.ba.b--white.bg-transparent(type="submit") Send
+
+		script(
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"
+			integrity="sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH"
+			crossorigin="anonymous")
+
+		script(
+			src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"
+			integrity="sha384-ZvT4Vepz59SdkHMUWrcs/PCrR+S74FveDmkNPgV9eCw6sBW2UZv07KwdSi79pnsg"
+			crossorigin="anonymous"
+			defer)
+
+		script(
+			src="https://use.fontawesome.com/releases/v5.0.10/js/brands.js"
+			integrity="sha384-6jhVhr5a+Z1nLr9h+fd7ocMEo847wnGFelCHddaOOACUeZNoQwFXTxh4ysXVam8u"
+			crossorigin="anonymous"
+			defer)
+
+		script(
+			src="https://use.fontawesome.com/releases/v5.0.10/js/regular.js"
+			integrity="sha384-JWLWlnwX0pRcCBsI3ZzOEyVDoUmngnFnbXR9VedCc3ko4R3xDG+KTMYmVciWbf4N"
+			crossorigin="anonymous"
+			defer)
+
+		script(
+			src="https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js"
+			integrity="sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG"
+			crossorigin="anonymous"
+			defer)
+
+		script(
+			src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"
+			integrity="sha384-jMjIgt4QdA1WrA0unG7/GNeNM9zeGeaOReuG/uSElOfCEqYxDuvSqzMpNfcwz8aI"
+			crossorigin="anonymous")
+
+		script.
+			$(function() {
+				var controller = new ScrollMagic.Controller({refreshInterval: 0, globalSceneOptions: {triggerHook: 0.25}});
+
+				var scene = new ScrollMagic.Scene({ triggerElement: '#band' })
+					.setClassToggle('header.fixed', 'active')
+					.addTo(controller);
+
+				var scenes = ['#band', '#shows', '#music', '#video', '#contact'].map((el) =>
+					new ScrollMagic.Scene({ triggerElement: el, duration: $(el).outerHeight() })
+						.setClassToggle('header.fixed a[href="' + el + '"]', 'active')
+						.addTo(controller)
+				);
+
+				$('header a').click(function(e) {
+					e.preventDefault();
+					document.querySelector($(this).attr('href')).scrollIntoView({ behavior: 'smooth' });
+					history.pushState({}, '', $(this).attr('href'));
+				});
+
+				$('a.filter-shows').click(function(e) {
+					e.preventDefault();
+					$(this).addClass('b bb').siblings().removeClass('b bb');
+					$($(this).attr('href')).show().siblings().hide();
+				});
+			})

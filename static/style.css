@@ -1,0 +1,97 @@
+html, body {
+	background-color: #181513;
+	color: #ffffffe0;
+}
+
+header.fixed {
+	z-index: 1;
+	background-color: #181513;
+	transform: translateY(-80%);
+	pointer-events: none;
+	opacity: 0;
+	transition: all 0.15s linear;
+
+	&.active {
+		pointer-events: all;
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	& a.active {
+		opacity: 1;
+		border-bottom: 2px solid white;
+	}
+}
+
+h1 {
+	font-family: "Monoton";
+}
+
+h2 {
+	color: white;
+}
+
+section.intro {
+	height: 100vh;
+	background-size: cover;
+	background-position: center 80%;
+	margin-bottom: -5rem;
+	background-image: url('./images/kane-reinholdtsen-449025-unsplash.1536.jpg');
+
+	@media only screen and (max-resolution: 120dpi) and (width <= 768px) {
+		background-image: url('./images/kane-reinholdtsen-449025-unsplash.768.jpg');
+	}
+
+	@media only screen and (min-resolution: 120dpi) and (width > 768px), only screen and (width > 1536px) {
+		background-image: url('./images/kane-reinholdtsen-449025-unsplash.jpg');
+	}
+}
+
+section {
+	min-height: 100vh;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+section#shows {
+	background-size: cover;
+	background-position: center 80%;
+	background-image: url('./images/jon-tyson-520874-unsplash.1536.jpg');
+
+	@media only screen and (max-resolution: 120dpi) and (width <= 768px) {
+		background-image: url('./images/jon-tyson-520874-unsplash.768.jpg');
+	}
+
+	@media only screen and (min-resolution: 120dpi) and (width > 768px), only screen and (width > 1536px) {
+		background-image: url('./images/jon-tyson-520874-unsplash.jpg');
+	}
+}
+
+section#contact {
+	background-size: cover;
+	background-position: center 80%;
+	background-image: url('./images/jason-mccann-381497-unsplash.1536.jpg');
+
+	@media only screen and (max-resolution: 120dpi) and (width <= 768px) {
+		background-image: url('./images/jason-mccann-381497-unsplash.768.jpg');
+	}
+
+	@media only screen and (min-resolution: 120dpi) and (width > 768px), only screen and (width > 1536px) {
+		background-image: url('./images/jason-mccann-381497-unsplash.jpg');
+	}
+}
+
+.aspect-ratio {
+	padding-bottom: 56.25%;
+	height: 0;
+	width: 100%;
+	position: relative;
+
+	& iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
