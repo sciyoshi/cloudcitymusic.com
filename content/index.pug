@@ -96,12 +96,18 @@ html
 
 				table.w-100.gray.mt4.pb6(cellspacing="0")
 					tbody#shows-upcoming
+						+show("2019", "Apr 13", "Sat", "")
+							a.black.link.dim(href="https://www.mercurylounge.com/") Mercury Lounge
+						+show("2019", "Feb 2", "Sat", "/static/posters/2019-feb-02.jpg")
+							a.black.link.dim(href="http://www.houseoftarg.com/concert-listings-events/the-bank-street-bonbons-cloud-city") House of Targ
+							br
+							span.o-40 w/ #[a.black.link.dim(href="https://www.facebook.com/BankStreetBonbons/") The Bank Street Bonbons]
+
+					tbody#shows-past.dn
 						+show("2018", "Aug 24", "Fri", "/static/posters/2018-aug-24.jpg")
 							a.black.link.dim(href="http://irenespub.ca/event/cloud-city") Irene's Pub
 							br
 							span.o-40 w/ #[a.black.link.dim(href="https://www.facebook.com/shesisd/") Doressa] and #[a.black.link.dim(href="https://www.facebook.com/tariq.amery") Tariq Amery]
-
-					tbody#shows-past.dn
 						+show("2018", "Jun 2", "Sat", "/static/posters/2018-jun-02.jpg")
 							a.black.link.dim(href="https://www.mercurylounge.com/") Mercury Lounge
 							br
