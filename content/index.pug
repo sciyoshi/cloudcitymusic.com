@@ -96,14 +96,18 @@ html
 
 				table.w-100.gray.mt4.pb6(cellspacing="0")
 					tbody#shows-upcoming
+						+show("2019", "Jul 19", "Fri", "")
+							a.black.link.dim(href="https://www.eventbrite.ca/e/babylon-nightclub-presents-cloud-city-tiny-cars-contra-midi-tickets-63724024272") Babylon Nightclub
+							br
+							span.o-40 w/ #[a.black.link.dim(href="https://www.facebook.com/tinycarstheband/") Tiny Cars] &amp; #[a.black.link.dim(href="https://www.facebook.com/CONTRAMIDI/") Contra MIDI]
+
+					tbody#shows-past.dn
 						+show("2019", "Apr 13", "Sat", "")
 							a.black.link.dim(href="https://www.mercurylounge.com/") Mercury Lounge
 						+show("2019", "Feb 2", "Sat", "/static/posters/2019-feb-02.jpg")
 							a.black.link.dim(href="http://www.houseoftarg.com/concert-listings-events/the-bank-street-bonbons-cloud-city") House of Targ
 							br
 							span.o-40 w/ #[a.black.link.dim(href="https://www.facebook.com/BankStreetBonbons/") The Bank Street Bonbons]
-
-					tbody#shows-past.dn
 						+show("2018", "Aug 24", "Fri", "/static/posters/2018-aug-24.jpg")
 							a.black.link.dim(href="http://irenespub.ca/event/cloud-city") Irene's Pub
 							br
