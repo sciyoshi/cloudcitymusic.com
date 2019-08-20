@@ -96,12 +96,17 @@ html
 
 				table.w-100.gray.mt4.pb6(cellspacing="0")
 					tbody#shows-upcoming
+						+show("2019", "Aug 24", "Sat", "/static/posters/2019-aug-24.jpg")
+							a.black.link.dim(href="https://www.houseoftarg.com/concert-listings-events/my-son-the-hurricane-drftr") House of Targ
+							br
+							span.o-40 w/ #[a.black.link.dim(href="https://drftrmusic.bandcamp.com/") DRFTR] &amp; #[a.black.link.dim(href="https://www.msthofficial.com/") My Son The Hurricane]
+			
+					tbody#shows-past.dn
 						+show("2019", "Jul 19", "Fri", "/static/posters/2019-jul-19.jpg")
 							a.black.link.dim(href="https://www.eventbrite.ca/e/babylon-nightclub-presents-cloud-city-tiny-cars-contra-midi-tickets-63724024272") Babylon Nightclub
 							br
 							span.o-40 w/ #[a.black.link.dim(href="https://www.facebook.com/tinycarstheband/") Tiny Cars] &amp; #[a.black.link.dim(href="https://www.facebook.com/CONTRAMIDI/") Contra MIDI]
 
-					tbody#shows-past.dn
 						+show("2019", "Apr 13", "Sat", "")
 							a.black.link.dim(href="https://www.mercurylounge.com/") Mercury Lounge
 						+show("2019", "Feb 2", "Sat", "/static/posters/2019-feb-02.jpg")
