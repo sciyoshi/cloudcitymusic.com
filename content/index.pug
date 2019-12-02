@@ -96,12 +96,21 @@ html
 
 				table.w-100.gray.mt4.pb6(cellspacing="0")
 					tbody#shows-upcoming
+						+show("2019", "Dec 7", "Sat", "")
+							a.black.link.dim(href="https://www.facebook.com/events/410155219689866/") Bar Robo
+							br
+							span.o-40 w/ #[a.black.link.dim(href="https://www.facebook.com/LittleNerves/") Little Nerves]
+						+show("2019", "Dec 13", "Fri", "")
+							a.black.link.dim(href="https://www.facebook.com/events/2492511870980768/") Babylon
+							br
+							span.o-40 w/ #[a.black.link.dim(href="https://afterfunk.ca/") After Funk] &amp; #[a.black.link.dim(href="https://www.thecardboardcrowns.com/") The Cardboard Crowns]
+
+					tbody#shows-past.dn
 						+show("2019", "Aug 24", "Sat", "/static/posters/2019-aug-24.jpg")
 							a.black.link.dim(href="https://www.houseoftarg.com/concert-listings-events/my-son-the-hurricane-drftr") House of Targ
 							br
 							span.o-40 w/ #[a.black.link.dim(href="https://drftrmusic.bandcamp.com/") DRFTR] &amp; #[a.black.link.dim(href="https://www.msthofficial.com/") My Son The Hurricane]
-			
-					tbody#shows-past.dn
+
 						+show("2019", "Jul 19", "Fri", "/static/posters/2019-jul-19.jpg")
 							a.black.link.dim(href="https://www.eventbrite.ca/e/babylon-nightclub-presents-cloud-city-tiny-cars-contra-midi-tickets-63724024272") Babylon Nightclub
 							br
